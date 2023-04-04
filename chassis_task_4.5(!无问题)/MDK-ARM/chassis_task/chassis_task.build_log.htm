@@ -1,0 +1,118 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¶ÃVision V5.25.3.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=FYKYW-QCDNF-9UQ4U-SILJ5-HXER7-4XURW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.14.0.0
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\ice\Desktop\chassis_task_4.4(!”–Œ Ã‚)(1)\MDK-ARM\chassis_task.uvprojx
+Project File Date:  04/04/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'E:\keil5\ARM\ARMCC\Bin'
+Build target 'chassis_task'
+compiling chassis_behaviour.c...
+..\application\CAN_receive.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_task.h(220): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_behaviour.h(62): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_behaviour.c(169): warning:  #1-D: last line of file ends without a newline
+  }
+..\application\chassis_behaviour.c: 4 warnings, 0 errors
+compiling chassis_task.c...
+..\application\CAN_receive.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_task.h(220): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_behaviour.h(62): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_task.c: 3 warnings, 0 errors
+compiling main.c...
+../application/calibrate_task.h(264): warning:  #1-D: last line of file ends without a newline
+  #endif
+../application/CAN_receive.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+../application/chassis_task.h(220): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Src/main.c: 3 warnings, 0 errors
+compiling freertos.c...
+../application/calibrate_task.h(264): warning:  #1-D: last line of file ends without a newline
+  #endif
+../application/CAN_receive.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+../application/chassis_task.h(220): warning:  #1-D: last line of file ends without a newline
+  #endif
+../application/jointmotor_task.h(112): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Src/freertos.c: 4 warnings, 0 errors
+compiling jointmotor_task.c...
+..\application\CAN_receive.h(42): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\jointmotor_task.h(112): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\chassis_task.h(220): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\application\jointmotor_task.c(210): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	leg_move_update->vy  =  leg_move_update->vy + leg_move_update->y_accel  * JOINTMOTOR_CONTROL_TIME_S ;
+..\application\jointmotor_task.c(278): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		leg_move_control_loop->FL = (KP_Y * leg_move_control_loop->delta_y - KD_Y * leg_move_control_loop->vy + G)/2 + (KP_ROLL * leg_move_control_loop->delta_roll - KD_ROLL * leg_move_control_loop->chassis_roll_speed)/D;
+..\application\jointmotor_task.c(279): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		leg_move_control_loop->FR = (KP_Y * leg_move_control_loop->delta_y - KD_Y * leg_move_control_loop->vy + G)/2 - (KP_ROLL * leg_move_control_loop->delta_roll - KD_ROLL * leg_move_control_loop->chassis_roll_speed)/D;	
+..\application\jointmotor_task.c(287): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	  left_frt_send.T  = 0.5*leg_move_control_loop->FL*leg_move_control_loop->vyL;
+..\application\jointmotor_task.c(288): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	  right_byd_send.T = 0.5*leg_move_control_loop->FR*leg_move_control_loop->vyR;
+..\application\jointmotor_task.c(301): warning:  #1-D: last line of file ends without a newline
+  }
+..\application\jointmotor_task.c(283): warning:  #177-D: variable "i" was declared but never referenced
+  	uint8_t i;
+..\application\jointmotor_task.c: 10 warnings, 0 errors
+linking...
+Program Size: Code=75704 RO-data=3252 RW-data=568 ZI-data=46776  
+FromELF: creating hex file...
+"chassis_task\chassis_task.axf" - 0 Error(s), 24 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM.CMSIS.4.2.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_chassis_task
+  E:\keil5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  E:\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
